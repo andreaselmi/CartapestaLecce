@@ -1,0 +1,246 @@
+/* 
+Theme Name: Selmi Theme
+Text Domain: AndreaSelmi
+Version: 1.0
+Description: Custom Theme for s2i project
+Tags: navbar, responsive, fancy
+Author: Andrea Selmi
+Author Uri: https://github.com/andreaselmi
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+:root {
+  --primary: #d0b49f;
+  --secondary: #4f4f4f;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --placeholder: #6b6b6b;
+  --light: #c2c2c2;
+  --lightgray: #eeeeee;
+  --dark: #434242;
+  --white: #fff;
+}
+
+/* COMMON */
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: var(--primary) !important;
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  color: var(--secondary);
+}
+
+/* PAGES */
+
+.page-wrap {
+  padding: 0.5rem;
+}
+/* HEADER */
+
+.navbar {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 1) 95%
+  );
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  color: black !important;
+}
+
+.navbar-nav > li {
+  margin-right: 25px;
+}
+.navbar-nav .nav-item .nav-link {
+  color: black;
+  font-weight: bold;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: var(--primary);
+}
+
+.navbar_search {
+  display: flex;
+  align-items: center;
+}
+
+/* HOME */
+
+.home_text_container {
+  position: absolute;
+  bottom: 150px;
+  max-width: 500px;
+  max-height: 200px;
+  overflow: scroll;
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .home_text_container {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
+
+/* POSTS */
+
+.post_card_meta {
+  display: flex;
+}
+.post_card_meta .post-categories {
+  display: flex;
+  padding: 0;
+  margin: 0 10px 0 0;
+}
+.post_card_meta .post-categories > li {
+  list-style-type: none;
+  padding-right: 5px;
+}
+
+.post_card_meta .post-categories li > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: bold;
+}
+.post_card_meta .post-categories li > a:hover {
+  text-decoration: underline;
+}
+
+span.date {
+  color: var(--light);
+}
+
+.card_footer .comment {
+  margin: 0 0 0 10px;
+}
+.card_footer .comment a {
+  color: var(--secondary);
+}
+.card_footer .comment a:hover {
+  color: var(--primary);
+}
+
+.pagination {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination > .screen-reader-text {
+  display: none;
+}
+
+.page-numbers {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 2px 0 0;
+  border: 1px solid #eee;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 2px;
+  font-weight: 600;
+  color: var(--primary);
+}
+.page-numbers.current,
+a.page-numbers:hover {
+  background: #f9f9f9;
+  color: var(--secondary);
+}
+
+/* SINGLE POST PAGE */
+
+.singlepost_container {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.singlepost_container .tag {
+  padding-right: 5px;
+}
+
+.single_post_subtitle {
+  color: var(--placeholder);
+  display: flex;
+}
+.single_post_subtitle .tag:first-of-type {
+  margin-left: 10px;
+}
+
+.single_post_subtitle .tag,
+.single_post_subtitle .tag a {
+  color: var(--placeholder);
+}
+
+.single_post_subtitle .tag a:hover {
+  color: var(--primary);
+}
+
+.singlepost_categories a {
+  color: var(--placeholder);
+  padding-right: 5px;
+}
+.singlepost_categories a:hover {
+  color: var(--primary);
+}
+
+/* CONTACT */
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 50%;
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* FOOTER */
+
+.footer > div,
+.footer > div > span > a {
+  color: var(--dark);
+}
+
+/* WIDGET */
+footer .textwidget {
+  min-width: 200px;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* SOCIAL WIDGET */
+.social_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.social_container > i {
+  font-size: 25px;
+  color: var(--dark);
+}
+.social_container > i:hover {
+  color: var(--primary);
+  cursor: pointer;
+}
